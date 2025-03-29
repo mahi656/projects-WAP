@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Master</title>
+    <link rel="stylesheet" href="readmeProject.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>🧩 Puzzle Master</h1>
+            <div class="level-display">
+                <span id="current-level">Level: Easy</span>
+                <span id="puzzle-count">Puzzle: 1/5</span>
+            </div>
+        </div>
+
+        <div class="difficulty-selector">
+            <button class="difficulty-btn easy active" data-level="easy">Easy</button>
+            <button class="difficulty-btn medium" data-level="medium">Medium</button>
+            <button class="difficulty-btn hard" data-level="hard">Hard</button>
+        </div>
+
+        <div class="game-area">
+            <div class="puzzle-pieces" id="pieces-container"></div>
+            <div class="puzzle-board" id="board"></div>
+        </div>
+
+        <div class="game-controls">
+            <div class="stats">
+                <div class="stat-box moves">
+                    <span>Moves:</span>
+                    <span id="move-count">0</span>
+                </div>
+                <div class="stat-box time">
+                    <span>Time:</span>
+                    <span id="time-display">0s</span>
+                </div>
+                <div class="stat-box hints">
+                    <span>Hints:</span>
+                    <span id="hints-display">3</span>
+                </div>
+            </div>
+            <button id="reset-btn" class="control-btn">🔁 Reset</button>
+            <button id="hint-btn" class="control-btn">💡 Hint</button>
+        </div>
+    </div>
+
+    <div class="level-complete-modal">
+        <div class="modal-content">
+            <h2>Level Complete! 🎉</h2>
+            <p>Moves: <span id="final-moves">0</span> | Time: <span id="final-time">0s</span></p>
+            <button id="next-puzzle-btn" class="control-btn">Next Puzzle ➡️</button>
+        </div>
+    </div>
+
+    <script src="readmeProject.js"></script>
+</body>
+</html>
